@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>Евклид</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#accordion" ).accordion();
+        } );
+    </script>
+
+     <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    
+</head>
+<body>
+    <section class="header">
+        <h2 class="visually-hidden">Шапка сайта, навигация</h2>
+        <div class="container">
+            <div class="header-content">
+                <div class="header-logo">
+                    <a href="#" class="header-logo__link">
+                        <img src="img/Логотип-1.png" alt="Логотип Евклид">
+                    </a>
+                </div>
+                <div class="header-nav">    
+                    <ul class="header-nav__list list">
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link"> О нас</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link"> Проекты</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link"> Этапы</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link"> Отзывы</a>
+                        </li>
+                        <li class="header-nav__item">
+                            <a href="#" class="header-nav__link"> Контакты</a>
+                        </li>
+                    </ul>
+                    <div class="header-nav__search">
+                        <form action="https://jsonplaceholder.typicode.com/users/1/posts" method="POST" class="header__search">
+                            <input type="search" class="form__search" name="search" id="search" >
+                            <label for="search" class="visually-hidden">Поиск по сайту</label>
+                            <button type="submit" class="header__search_btn" aria-label="Поиск по сайту">
+                                <svg width="26" height="26" viewbox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="19.5138" y="18.5495" width="8" height="2" transform="rotate(45 19.5138 18.5495)" fill="currentColor"/>
+                                    <circle cx="11.5" cy="11.5" r="10.5" stroke="currentColor" stroke-width="2"/>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                    <div id="burger" class="header-nav__burger">
+                    <!-- <a href="#"  class="burger__link" aria-label="Меню"> <span class="visually-hidden"> menu </span></a> -->
+                    </div>
+                    <div id="menu" class="burger__menu">
+                        <ul class="menu__list list">
+                            <li class="menu__item">
+                                <a href="#" class="header-nav__link"> О нас</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="header-nav__link"> Проекты</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="header-nav__link"> Этапы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="header-nav__link"> Отзывы</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#" class="header-nav__link"> Контакты</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </section>   
+       
+
+    <!--MAIN-->
+    <main class="main">
+        <div class="container">
+
+            <!--HERO-->
+            <section class="hero">
+                    <!-- Slider main container -->
+                    <div class="swiper-container">
+                        <!-- Additional required wrapper -->
+                        <div class="swiper-wrapper">
+                            <!-- Slides -->
+                            <div class="swiper-slide swiper-slide__main">
+                                <div class="hero__container">
+                                    <h1 class="hero__heading" tabindex="0">
+                                        Проектные решения любой сложности
+                                    </h1>
+                                    <p class="hero__text">
+                                        Есть над чем задуматься: базовые сценарии поведения пользователей и по сей день остаются уделом проектантов
+                                    </p>
+                                    <button type="submit" class="hero__btn btn_bg btn" aria-label="Заказать расчёт">
+                                        Заказать расчёт
+                                    </button>    
+
+                                </div>
+                            </div>
+                            <div class="swiper-slide swiper-slide__extra1"></div>
+                            <div class="swiper-slide swiper-slide__extra2"></div>
+                          
+                        </div>
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                
+                        
+                    </div>
+            
+            </section>
+
+            <!--ABOUT-US-->
+
+            <section class="about-us">
+                <h2 class="about-us__heading" tabindex="0">
+                    О нас
+                </h2>
+                <p class="about-us__text" tabindex="0">
+                    Также как перспективное планирование создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий 
+                    с учётом комплекса экспериментов, поражающих по своей масштабности и грандиозности. А также диаграммы связей могут быть описаны 
+                    максимально подробно. Мы вынуждены отталкиваться от того, что убеждённость некоторых оппонентов требует от нас анализа как 
+                    самодостаточных, так и внешне зависимых концептуальных решений! Следует отметить, что высококачественный прототип 
+                    <a class="about-us__tooltip" href="#" aria-label="Дополнительная информация"> i <span class="about-us_extra">extra information</span> </a> будущего проекта 
+                    предопределяет высокую востребованность позиций, занимаемых участниками в отношении поставленных задач. Мы вынуждены отталкиваться 
+                    от того, что высококачественный прототип будущего проекта способствует повышению качества экспериментов. 
+                </p>
+            </section>
+
+            <!--DETAILS-->
+            <section class="details">
+                <h2 class="visually-hidden"> Наши преимущетсва</h2>
+                <div class="details-info">
+                    <div class="details-info__content">
+                        <h3 class="visually-hidden">Планирование, принципы</h3>
+                        <p class="details-info__text" tabindex="0">
+                            Принимая во внимание показатели успешности, 
+                            перспективное планирование способствует подготовке 
+                            и реализации новых принципов.
+                        </p>
+                        <button type="submit" class="details-info__btn btn_tr-yellow btn" aria-label="Подробнее">
+                            Подробнее
+                        </button>
+                    </div>
+                        <!-- <svg x="0px" y="0px" width="500px" height="500px" viewbox="0 0 500 500">
+                            <defs>
+                              <filter id="blur" x="0%" y="0%" height="100%" width="100%" primitiveunits="userSpaceOnUse">
+                                <fegaussianblur x="50" y="50" width="400" height="400" stddeviation="10" in="SourceGraphic" result="blurImg"/>
+                                <fecomponenttransfer in="blurimg" result="opaqueblur">
+                                  <fefunca type="linear" intercept="1"/>
+                                </fecomponenttransfer>
+                                <feblend mode="normal" in="opaqueBlur" in2="SourceGraphic"/>
+                              </filter>
+                            </defs>
+                          
+                             <image filter="url(#blur)" x="10" y="10" id="svg-image" width="100%" height="100%" xlink:href="img/buider.jpg" />
+                          
+                              <rect x="50" y="50" height="400" width="400" fill="rgb(255,255,255)" fill-opacity="0.2" />
+                        </svg>
+                     -->
+                </div>
+
+                <div class="details-cards">
+                    <h3 class="visually-hidden">Наши убеждения</h3>
+                    <ul class="details-cards__list list">
+                        <li class="details-cards__item details-cards_cube" tabindex="0">
+                            <div class="details-cards__content">
+                                <b class="details-cards__heading">
+                                    Консультация с широким активом
+                                </b>
+                                <p class="details-cards__text">
+                                    А также свежий взгляд на привычные вещи - 
+                                    безусловно открывает новые горизонты для как 
+                                    самодостаточных, так и внешне зависимых 
+                                    концептуальных решений.
+                                </p>    
+                            </div>
+                            
+                        </li>
+                        <li class="details-cards__item details-cards_gear" tabindex="0">
+                            <div class="details-cards__content">
+                                <b class="details-cards__heading">
+                                    В своём стремлении повысить
+                                </b>
+                                <p class="details-cards__text">
+                                    Качество жизни, они забывают, что сплочённость 
+                                    команды профессионалов представляет собой 
+                                    интересный эксперимент проверки прогресса 
+                                    профессионального сообщества.
+                                </p>    
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!--PROCESS-->
+
+            <section class="process">
+                <h2 class="process__heading" tabindex="0">
+                    Как мы работаем
+                </h2>
+                <ul class="process-step__list list">
+                    <li class="process-step__item">
+                        <a href="#" class="process-step__item_n" aria-label="Первый шаг">1 шаг </a>
+                    </li>
+                    <li class="process-step__item">
+                        <a href="#" class="process-step__item_n" aria-label="Второй шаг">2 шаг</a>
+                    </li>
+                    <li class="process-step__item">
+                        <a href="#" class="process-step__item_n" aria-label="Третий шаг">3 шаг</a>
+                    </li>
+                    <li class="process-step__item">
+                        <a href="#" class="process-step__item_n" aria-label="Четвертый шаг">4 шаг</a>
+                    </li>
+                </ul>
+                <div class="process-page">
+                    <div class="process-page__content_1">
+                        <h3 class="process-page__heading_1" tabindex="0">
+                            Проводим консультацию
+                        </h3>
+                        <p class="process-page__text_1" tabindex="0">
+                            Влечет за собой процесс внедрения и модернизации приоритизации разума над 
+                            эмоциями. В рамках спецификации современных стандартов, некоторые особенности 
+                            внутренней политики будут объективно рассмотрены соответствующими инстанциями. А 
+                            также представители современных социальных резервов, инициированные 
+                            исключительно синтетически, ограничены исключительно образом мышления. Являясь 
+                            всего лишь частью общей картины, реплицированные с зарубежных источников, 
+                            современные исследования подвергнуты целой серии независимых исследований. 
+                            Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают 
+                            чрезвычайно интересные особенности картины в целом, однако конкретные выводы, 
+                            разумеется, призваны к ответу.
+                        </p>
+                    
+                        <div class="process-page__btn">
+                            <button type="submit" class="process-page__btn1 btn_bg btn" aria-label="Подробнее о консультациях">
+                                Подробнее
+                            </button>
+                            <button type="submit" class="process-page__btn2 btn_tr-grey btn" aria-label="Договор">
+                                Договор
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--QUESTIONS-->
+
+            
+            <section class="questions">
+                <h2 tabindex="0">
+                    Часто задаваемые вопросы
+                </h2>
+
+                <div id="accordion">
+                    <h3 class="questions__title"> Из чего формируется конечная стоимость проекта?</h3>
+                    <div class="accordion__content">
+                        <p class="accordion__inner">
+                            Являясь всего лишь частью общей картины, непосредственные участники технического прогресса призывают нас к 
+                            новым свершениям, которые, в свою очередь, должны быть своевременно верифицированы. Но высококачественный 
+                            прототип будущего проекта является качественно новой ступенью первоочередных требований. А ещё некоторые 
+                            особенности внутренней политики, которые представляют собой яркий пример континентально-европейского типа 
+                            политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. И нет сомнений, 
+                            что явные признаки победы институционализации призывают нас к новым свершениям, которые, в свою очередь, 
+                            должны быть указаны как претенденты на роль ключевых факторов.
+                        </p>
+                        <br>
+                        <p class="accordion__inner">
+                            Приятно, граждане, наблюдать, как некоторые особенности внутренней политики могут быть призваны к ответу. 
+                            Явные признаки победы институционализации набирают популярность среди определенных слоев населения, а 
+                            значит, должны быть объединены в целые кластеры себе подобных. Банальные, но неопровержимые выводы, а также 
+                            многие известные личности призывают нас к новым свершениям, которые, в свою очередь, должны быть 
+                            представлены в исключительно положительном свете. 
+                        </p>
+                    </div>
+                    <h3 class="questions__title">У меня есть свой проект. Сможем ли мы его доработать / реализовать?</h3>
+                    <div class="accordion__content">
+                        <p class="accordion__inner">
+                            У меня есть свой проект. Сможем ли мы его доработать / реализовать?
+                        </p>
+                    </div>
+                    <h3 class="questions__title">Я выбираю между разными компаниями. В чём ваше отличие?</h3>
+                    <div class="accordion__content">
+                        <p class="accordion__inner">
+                            Я выбираю между разными компаниями. В чём ваше отличие?
+                        </p>
+                    </div>
+                    <h3 class="questions__title">Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?</h3>
+                    <div class="accordion__content">
+                        <p class="accordion__inner">
+                            Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?
+                        </p>
+                    </div>
+                    <h3 class="questions__title">Могу ли я вернуть деньги на каком-либо из этапов работ?</h3>
+                    <div class="accordion__content">
+                        <p class="accordion__inner">
+                            Могу ли я вернуть деньги на каком-либо из этапов работ?
+                        </p>
+                    </div>
+                  </div>
+                <!-- <ul class="questions__list list">
+                    <li class="questions__item questions-item_1">
+                        <a href="#" class="questions__link" >
+                            Из чего формируется конечная стоимость проекта?
+                        </a>
+                    </li>
+                    <li class="questions__item questions-item_2">
+                        <a href="#" class="questions__link">
+                            У меня есть свой проект. Сможем ли мы его доработать / реализовать?
+                        </a>
+                    </li>
+                    <li class="questions__item questions-item_3">
+                        <a href="#" class="questions__link">
+                            Я выбираю между разными компаниями. В чём ваше отличие?
+                        </a>
+                    </li>
+                    <li class="questions__item questions-item_4">
+                        <a href="#" class="questions__link">
+                            Могу ли я делегировать вам работу / согласование с подрядчиком / организацией?
+                        </a>
+                    </li>
+                    <li class="questions__item questions-item_5">
+                        <a href="#" class="questions__link">
+                            Могу ли я вернуть деньги на каком-либо из этапов работ?
+                        </a>
+                    </li>
+                </ul> -->
+            </section>
+        </div>
+    </main>
+
+        <!--FOOTER-->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <h2 class="visually-hidden" >Подвал, форма обратной связи</h2>
+                <section class="footer-left">
+                    <h2 class="visually-hidden" >О нас</h2>
+                    <div class="footer-left__content">
+                        <a href="#" class="footer-left__logo">
+                            <img src="img/Логотип-2.png" alt="Логотип Евклид">
+                        </a>
+                        
+                        <p class="footer-left__text" tabindex="0">
+                            Высокий уровень вовлечения 
+                            представителей целевой аудитории 
+                            является четким доказательством 
+                            простого факта: разбавленное изрядной 
+                            долей эмпатии, рациональное мышление 
+                            позволяет оценить значение модели 
+                            развития. Таким образом, консультация с 
+                            широким активом обеспечивает 
+                            широкому кругу (специалистов) участие в 
+                            формировании стандартных подходов.
+                        </p>
+                    </div>
+                    <div class="footer__socials">
+                    <h2 class="visually-hidden" >Cоциальные сети</h2>
+                        <ul class="socials__list list">
+                            <li class="socials__item" >
+                                <a href="#" class="socials_fb socials__icon">
+                                <span class="visually-hidden">Facebook</span>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="#" class="socials_vk socials__icon">
+                                <span class="visually-hidden">Vkontakte</span>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="#" class="socials_inst socials__icon">
+                                <span class="visually-hidden" >Instagram</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section class="footer-mid">
+                    <h2 class="footer-mid__heading" tabindex="0"    >
+                        Оставить заявку
+                    </h2>
+                    <form action="https://jsonplaceholder.typicode.com/users/1/posts" method="POST" class="footer-mid__form">
+                        <input type="text" placeholder="Фамилия, имя и отчество*" id="name" name="name">
+                            <label for="name" class="visually-hidden">Фамилия, имя и отчество</label>
+                        <input type="email" placeholder="E-mail*" id="mail" name="mail">
+                            <label for="mail" class="visually-hidden">Электронный адрес</label>
+                        <textarea id="message" name="message" cols="30" rows="4" placeholder="Сообщение"></textarea>
+                            <label for="message" class="visually-hidden">Ваше сообщение</label>
+                        <div class="footer-mid__btn-part">
+                            <button type="submit" class="footer-mid__btn btn_bg btn">
+                            Отправить данные
+                            </button>
+                            <input  type="checkbox" id="footer-checkbox" class="checkbox_checked" name="data processing" value="yes" aria-checked="true">
+                            <label for="footer-checkbox" class="form__checkbox">Согласен на обработку данных    </label>   
+                        </div>
+                            
+                    </form>
+                </section>
+
+
+                <section class="footer-right">
+                    <h2 class="visually-hidden">Навигация, социальные сети</h2>
+                    <a href="#" class="footer-left__logo-1024">
+                        <img src="img/Логотип-2.png" alt="Логотип Евклид">
+                    </a>
+                    <ul class="footer-right__list list">
+                        <li class="footer-right__item">
+                            <a href="#">
+                                О нас
+                            </a>
+                        </li>
+                        <li class="footer-right__item">
+                            <a href="#">
+                                Проекты
+                            </a>
+                        </li>
+                        <li class="footer-right__item">
+                            <a href="#">
+                                Отзывы
+                            </a>
+                        </li>
+                        <li class="footer-right__item">
+                            <a href="#">
+                                Договор оферты
+                            </a>
+                        </li>
+                        <li class="footer-right__item">
+                            <a href="#">
+                                Договор подряда
+                            </a>
+                        </li>
+                        <li class="footer-right__item footer-right__item_1920">
+                            <a href="#">
+                                Конфидециальность
+                            </a>
+                        </li>
+                        <li class="footer-right__item footer-right__item_1024">
+                            <a href="#">
+                                Политика конфидециальности
+                            </a>
+                        </li>
+                        <li class="footer-right__item">
+                            <a href="#">
+                                Партнёрское соглашение
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="footer__socials footer__socials_1024">
+                        <ul class="socials__list list">
+                            <li class="socials__item">
+                                <a href="/" class="socials_fb socials__icon">
+                                <span class="visually-hidden">Facebook</span>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="/" class="socials_vk socials__icon">
+                                <span class="visually-hidden">Vkontakte</span>
+                                </a>
+                            </li>
+                            <li class="socials__item">
+                                <a href="/" class="socials_inst socials__icon">
+                                <span class="visually-hidden">Instagram</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </section>    
+            </div>
+            
+        </div>
+    </footer>
+
+</body>
+</html> 
